@@ -1,0 +1,3 @@
+{'name': 'Joshson', 'phone': 414037789, 'location': 'Kingsford 243', 'specializaton': 'Paediatric Dentistry', 'time': 'Monday Tuesday Firday 9:00-10:00 10:00-11:00 11:00-12:00 2:00-3:00 3:00-4:00 4:00-5:00'}
+{'name': 'Chris', 'phone': 414896788, 'location': 'Randwick 346', 'specializaton': 'Orthodontics', 'time': 'Wednesday Thurday 9:00-10:00 10:00-11:00 11:00-12:00 2:00-3:00 3:00-4:00 4:00-5:00'}
+{'name': 'Andonis', 'phone': 414895558, 'location': 'Kensington 224', 'specializaton': 'Oral Surgery', 'time': 'Monday Tuesday Wednesday Thurday Friday 12:00-1:00 1:00-2:00 3:00-4:00 4:00-5:00'}

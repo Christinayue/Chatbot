@@ -1,0 +1,58 @@
+{
+  "swagger": "2.0",
+  "basePath": "/v1",
+  "info": {
+    "version": "1.0.0",
+    "title": "Chatbot",
+    "description": "This is a simple chatbot"
+  },
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json",
+    "text/plain"
+  ],
+  "paths": {
+    "/ask/{message}": {
+      "post": {
+        "tags": [
+          "Ask"
+        ],
+        "summary": "client message",
+        "description": "",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "message",
+            "in": "path",
+            "description": "message you want to ask",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successfully operation",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "answer": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid Order"
+          }
+        }
+      }
+    }
+  }
+}

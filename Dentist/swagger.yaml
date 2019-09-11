@@ -1,0 +1,102 @@
+swagger: "2.0"
+basePath: "/v1"
+info:
+  version: 1.0.0
+  title: "Dentist Information"
+  description: "Get information of the dentists."
+host: "localhost"
+schemes:
+  - "http"
+  - "https"
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+  - "text/plain"
+paths:
+  /dentists:
+    get:
+      tags:
+        - "Dentist"
+      summary: "Give the information of all the dentists"
+      description: ""
+      consumes: 
+      - "application/json"
+      - "application/xml"
+      produces: 
+      - "application/json"
+      - "application/xml"
+      parameters: []
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Dentist"
+        400:
+          description: "Invalid operation"
+    post:
+      tags:
+        - "Dentist"
+      summary: "add a new dentist"
+      description: " "
+      operationId: "placetime"
+      produces: 
+      - "application/xml"
+      - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "time for booking"
+          required: true
+          schema:
+            $ref: '#/definitions/Dentist'
+      responses:
+        200:
+          description: "successfully operation"
+          schema:
+            $ref: "#/definitions/Dentist"
+        400:
+          description: "Invalid information"
+          
+  /dentists/{name}:
+    get:
+      tags:
+        - "Dentist"
+      summary: "get the information of the dentist by its name."
+      description: ""
+      produces: 
+      - "application/json"
+      parameters:
+        - name: "name"
+          in: "path"
+          description: "Name of the dentist"
+          required: true
+          type: "string"
+      responses:
+        200:
+          description: "OK"
+          schema:
+            $ref: '#/definitions/Dentist'
+        400:
+          description: "Invalid name"
+        404:
+          description: "Name not found"
+definitions:
+  Dentist:
+    type: object
+    properties:
+      name:
+        type: string
+      phone:
+        type: integer
+      location:
+        type: string
+      specializaton:
+        type: string
+      time:
+        type: string
+        
+        
+        
